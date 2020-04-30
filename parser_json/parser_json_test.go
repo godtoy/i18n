@@ -1,8 +1,8 @@
 package parser_json
 
 import (
-	"github.com/gohouse/i18n"
-	"testing"
+    "gt-bots/libs/i18n"
+    "testing"
 )
 
 func TestNewI18nDefault(t *testing.T) {
@@ -16,7 +16,7 @@ func TestNewI18nDefault(t *testing.T) {
 	})
 	err := pj.Parse()
 	if err!=nil {
-		t.Error(err.ErrorWithStack())
+		t.Error(err)
 	}
 	res := pj.Load("error.params_missing")
 	res2 := pj.Load("error.err2.bb.cc")
